@@ -3,6 +3,8 @@ const numberInput = document.querySelector("#number")
 const multiplicationInput = document.querySelector("#multiplicator")
 const multiplicationTable = document.querySelector("#multiplication-operation")
 
+const multiplicationTitle = document.querySelector("#multiplication-title span")
+
 const createTable = (number, multiplicatiorNumber) => {
     multiplicationTable.innerHTML = "";
 
@@ -24,6 +26,9 @@ const createTable = (number, multiplicatiorNumber) => {
 
         multiplicationTable.appendChild(row)
     }
+
+    multiplicationTitle.innerText = number;
+
 }
 
 multiplicationForm.addEventListener("submit", (e) => {
